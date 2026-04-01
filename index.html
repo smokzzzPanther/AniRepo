@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+    ☀️
+  </button>
+
+  <div class="app-container">
+    <header class="header">
+      <h1 class="logo">🎬 Movie Explorer</h1>
+      <p class="tagline">Search, filter, and sort your favorite movies</p>
+    </header>
+
+    <!-- Search Section -->
+    <section class="controls-section">
+      <form id="search-form" class="search-bar">
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search for movies (e.g., 'Batman')..." 
+          required
+        >
+        <button type="submit" class="primary-btn">Search</button>
+      </form>
+
+      <!-- Filter & Sort Controls -->
+      <div class="filters-bar" id="filters-container" style="display: none;">
+        <div class="control-group">
+          <label for="type-filter">Filter by Type:</label>
+          <select id="type-filter">
+            <option value="all">All</option>
+            <option value="movie">Movies</option>
+            <option value="series">Series</option>
+            <option value="episode">Episodes</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="year-sort">Sort by Year:</label>
+          <select id="year-sort">
+            <option value="default">Default</option>
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main>
+      <!-- Loading Indicator -->
+      <div id="loading" class="status-message hidden">
+        <div class="spinner"></div>
+        <p>Fetching movies...</p>
+      </div>
+
+      <!-- Error Message -->
+      <div id="error-message" class="status-message error hidden">
+        <p id="error-text">No movies found.</p>
+      </div>
+
+      <!-- Results Grid -->
+      <div id="movie-grid" class="movie-grid">
+        <!-- Movie cards will be rendered here by JavaScript -->
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
