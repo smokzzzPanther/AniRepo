@@ -17,7 +17,7 @@ const themeToggleBtn = document.getElementById('theme-toggle');
 // OMDb API Key (free tier API key for demo)
 const API_KEY = 'YOUR_OMDB_API_KEY'; // Note: students usually register their own, we'll use a placeholder or public one if needed, but OMDb requires one.
 // Let's use a known public key for teaching, or just placeholder. Let's use 'tt3896198' standard format. 'apikey=72a6b22b' is a commonly shared public test key, but it's best to handle errors if it fails.
-const PUBLIC_OMDB_KEY = '72a6b22b'; 
+const PUBLIC_OMDB_KEY = 'thewdb';
 
 // State Management
 let moviesData = []; // To store fetched movies
